@@ -1,0 +1,17 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0.5vw;
+    background-color: darkblue;
+
+    .Navbar-ul{
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+        li{
+            margin-inline: 2vw;
+        }
+    }
+}

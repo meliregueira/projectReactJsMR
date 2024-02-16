@@ -1,0 +1,31 @@
+[
+    {
+        "id": "AKT",
+        "nombre": "Animal Kingdom",
+        "precio": 150000,
+        "stock": 2000000,
+        "img": "./assets/img/animalKingdom.jpg"
+    },
+    {
+        "id": "MKT",
+        "nombre": "Magic Kingdom",
+        "precio": 275000,
+        "stock": 2000000,
+        "img": "./assets/img/magicKingdom.jpg"
+    },    
+    {
+        "id": "HST",
+        "nombre": "Holywood Studios",
+        "precio": 250000,
+        "stock": 2000000,
+        "img": "./assets/img/hollywoodStudios.jpg"
+    },
+    {
+        "id": "EPT",
+        "nombre": "Epcot",
+        "precio": 125000,
+        "stock": 2000000,
+        "img": "./assets/img/epcot.jpg"
+    }
+
+]
