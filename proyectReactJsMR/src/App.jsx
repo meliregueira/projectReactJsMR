@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import Error from './components/Error/Error';
 import './App.css'
 
 const App = () => {
@@ -17,13 +18,13 @@ const App = () => {
 
           <Route path='/' element={<ItemListContainer greeting = {"Comprá tus entradas acá"}/>} />
 
-          <Route path='/detalle' element={<ItemDetailContainer id={"MKT"}/>} />
+          <Route path='/Entradas/:id' element={<ItemDetailContainer/>} />
 
           <Route/>
 
           <Route/>
 
-          <Route/>
+          <Route path='*' element={<Error/>}/>
 
         </Routes>
 

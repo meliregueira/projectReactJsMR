@@ -1,9 +1,13 @@
 import React, {useState,useEffect} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail';
+import { useParams } from 'react-router-dom';
 
-const ItemDetailContainer = ({id}) => {
+
+const ItemDetailContainer = ({}) => {
 
   const [entrada,setEntrada] = useState ([]);
+
+  const {id} = useParams();
 
   useEffect(()=>{
 
@@ -24,7 +28,8 @@ const ItemDetailContainer = ({id}) => {
   
   return (
     <div>
-    <ItemDetail entrada={entrada}/>
+      <h1>das</h1>
+    {/* <ItemDetail entrada={entrada}/> */}
     </div>
   )
 }

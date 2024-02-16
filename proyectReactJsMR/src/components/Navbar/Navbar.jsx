@@ -1,18 +1,19 @@
 import React from 'react'
 import './Navbar.css'
+import { Link,NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <div className='Navbar'>
         
-    <h1>Walt Disney World</h1>
+    <h1><NavLink to='/'>Walt Disney World</NavLink></h1>
     <ul className='Navbar-ul'>
-        <li><a href="">Inicio</a></li>
-        <li><a href="">Entradas</a></li>
-        <li><a href="">Parques</a></li>
-        <li><a href="">Novedades</a></li>
-        <li><a href="">My Disney World</a></li>
-        <li><a href="">Contacto</a></li>
+
+        <li><NavLink to='/Entradas'>Entradas</NavLink></li>
+        <li><NavLink to='/Parques'>Parques</NavLink></li>
+        <li><NavLink to='/Novedades'>Novedades</NavLink></li>
+        <li><NavLink to='/MyDisneyWorld'>My Disney World</NavLink></li>
+        <li><NavLink to='/Contacto'>Contacto</NavLink></li>
     </ul>
     
     </div>
