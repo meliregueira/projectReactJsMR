@@ -11,19 +11,27 @@ const App = () => {
     <div className='ecomm'>
       <BrowserRouter>
 
-      <Routes>
-
-         </Route>
-
-      </Routes>
-
         <Navbar/>
-        <ItemListContainer greeting = {"Comprá tus entradas acá"}/>
+
+        <Routes>
+
+          <Route path='/' element={<ItemListContainer greeting = {"Comprá tus entradas acá"}/>} />
+
+          <Route path='/detalle' element={<ItemDetailContainer id={"MKT"}/>} />
+
+          <Route/>
+
+          <Route/>
+
+          <Route/>
+
+        </Routes>
+
         <Footer/>
 
     </BrowserRouter>
 
-        {/* <ItemDetailContainer id={"MKT"}/> */}
+        
 
 
     </div>
