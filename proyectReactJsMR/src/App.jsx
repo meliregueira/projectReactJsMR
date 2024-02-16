@@ -1,21 +1,30 @@
-import { useState,useEffect } from 'react'
-import Counter from './components/Counter/Counter'
-import Footer from './components/Footer/Footer'
-import Navbar from './components/Navbar/Navbar'
-import ItemCount from './components/ItemCount/ItemCount'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import Footer from './components/Footer/Footer';
+import Navbar from './components/Navbar/Navbar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import './App.css'
 
 const App = () => {
 
   return (
     <div className='ecomm'>
-    <Navbar/>
-    <ItemListContainer greeting = {"Comprá tus entradas acá"}/>
+      <BrowserRouter>
 
-    <ItemDetailContainer id={"MKT"}/>
-    <Footer/>
+      <Routes>
+
+         </Route>
+
+      </Routes>
+
+        <Navbar/>
+        <ItemListContainer greeting = {"Comprá tus entradas acá"}/>
+        <Footer/>
+
+    </BrowserRouter>
+
+        {/* <ItemDetailContainer id={"MKT"}/> */}
+
 
     </div>
   )
