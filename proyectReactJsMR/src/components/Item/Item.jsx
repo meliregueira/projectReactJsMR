@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 const Item = ({entrada}) => {
   return (
 
-    <Link to={`/Entradas/${entrada.id}`}>
+    <Link to={`/detalle/${entrada.id}`}>
       
-    <div className='carts' key={entrada.id}>
+    <div key={entrada.id} className='carts'>
         <img src={entrada.img} alt={entrada.nombre}/>
         <h2>{entrada.nombre}</h2>
     </div>  

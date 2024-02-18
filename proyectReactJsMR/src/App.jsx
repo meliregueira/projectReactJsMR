@@ -1,3 +1,4 @@
+import React from 'react';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
@@ -16,15 +17,13 @@ const App = () => {
 
         <Routes>
 
-          <Route path='/' element={<ItemListContainer greeting = {"Comprá tus entradas acá"}/>} />
+        <Route path='/' element={<ItemListContainer/>}/>
 
-          <Route path='/Entradas/:id' element={<ItemDetailContainer/>} />
+        <Route path='/categoria/:categoryId' element={<ItemListContainer/>}/>
 
-          <Route/>
+        <Route path='/detalle/:id' element={<ItemDetailContainer/>}/> 
 
-          <Route/>
-
-          <Route path='*' element={<Error/>}/>
+        <Route path='*' element={<Error/>}/>
 
         </Routes>
 
