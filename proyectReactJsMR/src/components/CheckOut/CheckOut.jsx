@@ -10,6 +10,7 @@ const CheckOut = () => {
     const [nombre,setNombre] = useState("")
     const [apellido,setApellido] = useState("")
     const [telefono,setTelefono] = useState("")
+    const [pais,setPais] = useState("")
     const [email,setEmail] = useState("")
     const [emailConfirmacion,setEmailConfirmacion] = useState("")
     const [error,setError] = useState("")
@@ -75,8 +76,6 @@ const CheckOut = () => {
         })
     }
 
-
-
     return (
         <div>
 
@@ -112,8 +111,13 @@ const CheckOut = () => {
                     </div>
 
                     <div>
-                        <label htmlFor="Nombre">Teléfono</label>
-                        <input name="Teléfono" type='text' onChange={(e) => setTelefono(e.target.value)}/>
+                        <label htmlFor="Telefono">Teléfono</label>
+                        <input name="Teléfono" type='text' pattern='[0-9 ()+.-]*' onChange={(e) => setTelefono(e.target.value)}/>
+                    </div>
+
+                    <div>
+                        <label htmlFor="Pais">País</label>
+                        <input name="Pais" type='text' onChange={(e) => setPais(e.target.value)}/>
                     </div>
 
                     <div>
