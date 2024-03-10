@@ -20,8 +20,8 @@ import CartItem from '../CartItem/CartItem';
         :
         <>
         <h2>Lista de carrito</h2>
-        {cart.map((e) => (
-          <CartItem key={e.id} entrada={e} eliminarEntrada={eliminarEntrada}/>
+        {cart.map((ent) => (
+          <CartItem key={ent.id} entrada={ent} eliminarEntrada={eliminarEntrada}/>
         ))}
 
         <p>Total: ${totalCarrito()}</p>

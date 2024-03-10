@@ -9,7 +9,7 @@ import './App.css';
 import Cart from './components/Cart/Cart';
 import ThemeProvider from './context/ThemeContext';
 import CartProvider from './context/CartContext';
-import CheckOut from './components/CheckOut';
+import Checkout from './components/CheckOut/CheckOut';
 
 const App = () => {
 
@@ -29,9 +29,9 @@ const App = () => {
 
             <Route path='/detalle/:id' element={<ItemDetailContainer />} />
 
-            <Route path='/cart' element={<Cart />} />
+            <Route path='/cart' element={<Cart/>} />
 
-            <Route path='/CheckOut' element={<CheckOut/>}/>
+            <Route path='/checkout' element={<Checkout/>}/>
 
             <Route path='*' element={<Error />} />
 

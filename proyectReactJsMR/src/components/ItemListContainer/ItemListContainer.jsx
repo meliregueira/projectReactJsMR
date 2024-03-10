@@ -1,7 +1,7 @@
 import { useState,useEffect } from 'react'
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import { db } from '../firebase/config';
+import { db } from '../../firebase/config';
 import { collection,getDocs,query,where } from 'firebase/firestore'
 
 const ItemListContainer = ({greeting}) => {
@@ -13,9 +13,9 @@ const ItemListContainer = ({greeting}) => {
   useEffect(()=>{
 
     const misEntradas = 
-    categoryId ? query(collection(db,"item "),where("categoria", "==",categoryId))
+    categoryId ? query(collection(db,"entrada"),where("categoria", "==",categoryId))
     :
-    collection(db,"item")
+    collection(db,"entrada")
 
     getDocs(misEntradas)
     .then((respuesta) => {

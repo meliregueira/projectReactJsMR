@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
-import { db } from '../firebase/config';
+import { db } from '../../firebase/config';
 import { collection,addDoc,updateDoc,doc,getDoc } from 'firebase/firestore';
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../../context/CartContext';
 
 const Checkout = () => {
 
@@ -13,28 +13,28 @@ const Checkout = () => {
     const [email,setEmail] = useState("")
     const [emailConfirmacion,setEmailConfirmacion] = useState("")
     const [error,setError] = useState("")
-    const [ordenId,setOrdenId] = useState("")
+    const [idOrden,setidOrden] = useState("")
 
     const manejadorFormulario = (event) => {
 
         event.preventDefault()
 
         if(!nombre || !apellido || !telefono || !email || !emailConfirmacion){
-            setError("Completar los campos requeridos")
+            setError("Completar los campos obligatorios")
             return;
         }
 
         if(email !== emailConfirmacion) {
-            setError("Los campos del email no coinciden")
-            return;
-        }
+            setError("Los emails no coinciden")
+            return;}
 
         const orden = {
             items: cart.map((entrada) => ({
                 id: entrada.entrada.id,
                 nombre: entrada.entrada.nombre,
-                cantidad: entrada.cantidad
-            })),
+                cantidad: entrada.cantidad})),
+
+
             total: totalCarrito(),
             fecha: new Date(),
             nombre,
@@ -45,7 +45,7 @@ const Checkout = () => {
 
         Promise.all(
             orden.items.map(async (entradaOrden) => {
-                const entradaRefe = doc(db,"item",entradaOrden.id);
+                const entradaRefe = doc(db,"entrada",entradaOrden.id);
                 const entradaDoc = await getDoc(entradaRefe)
                 const stockActual = entradaDoc.data().stock
 
@@ -58,18 +58,20 @@ const Checkout = () => {
             addDoc(collection(db,"ordenes"),orden)
             .then((docRef) => {
                 setError("")
-                setOrdenId(docRef.id)
+                setidOrden(docRef.id)
                 vaciarCarrito()
             })
+
+
             .catch((error) => {
                 console.log(error)
-                setError("Se produjo un error al crear la orden")
+                setError("Hubo un error al crear la orden")
             })
 
         })
         .catch((error) => {
             console.log(error)
-            setError("No se puede actualizar el stock")
+            setError("No es posible actualizar el stock")
         })
     }
 
@@ -84,7 +86,7 @@ const Checkout = () => {
 
                 {cart.map((entrada) => (
 
-                    <div key={entrada.entrada.id}>
+                <div key={entrada.entrada.id}>
 
                         <p>
                             {""}
@@ -95,6 +97,8 @@ const Checkout = () => {
                     </div> 
                 ))}
 
+               
+               
                 <div >
 
                     <div>
@@ -126,9 +130,9 @@ const Checkout = () => {
 
                     {error && <p>{error}</p>}
 
-                    {ordenId && (
+                    {idOrden && (
                         <h1>
-                            Estas listo?? Te vas a Disney!! Tu número de compra es: {ordenId}
+                            Estas listo?? Te vas a Disney!! Tu número de compra es: {idOrden}
                         </h1>
                     )}
 
