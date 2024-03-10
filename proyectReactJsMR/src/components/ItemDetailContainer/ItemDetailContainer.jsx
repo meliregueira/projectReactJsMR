@@ -1,24 +1,23 @@
 import React, { useState, useEffect} from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
+import { db } from '../firebase/config';
+import { doc,getDoc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
   const [entrada, setEntrada] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/entradas.json");
-        const data = await response.json();
-        const entrances = data.find((p) => p.id == id);
-        setEntrada(entrances);
-      } catch (error) {
-        console.log("Error en el fetch" + error);
-      }
-    };
+    const nuevoDoc = doc(db,"item",id)
+    getDoc(nuevoDoc).then(respuesta => {
+      const data = respuesta.data()
+      const nuevaEntrada = {id: respuesta.id,...data}
+      setEntrada(nuevaEntrada)
 
-    fetchData();
+    })
+
+    .catch(error => console.log(error))
   }, []);
 
   return (

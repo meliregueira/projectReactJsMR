@@ -9,57 +9,9 @@ import './App.css';
 import Cart from './components/Cart/Cart';
 import ThemeProvider from './context/ThemeContext';
 import CartProvider from './context/CartContext';
-// import { getfirestore,doc,getDoc, getFirestore } from 'firebase/firestore';
-// import { getFirestore,collection,getDocs } from 'firebase/firestore';
-import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
+import CheckOut from './components/CheckOut';
 
 const App = () => {
-
-  // const [ticket,setTicket] = useState(null)
-
-  // useEffect(()=>{
-  //   const db = getFirestore()
-
-  //   const entradaRef = doc(db,"item","CtE2WPODWqcphN3GtwBj")
-
-  //   getDoc(entradaRef).then((snapshot) => {
-  //     if(snapshot.exists){
-  //       setTicket({id: snapshot.id,...snapshot.data()})
-  //     }
-  //   })
-  // },[])
-
-  // const [ticket,setTickets] = useState([])
-  // useEffect(()=>{
-  //   const db = getFirestore()
-
-  //   const itemsCollection = collection(db,"item")
-
-  //   getDocs(itemsCollection).then((snapshot) => {
-  //     setTickets(snapshot.docs.map((doc)=> (
-  //       {id:doc.id,...doc.data()}
-  //     )))
-  // }
-  // )
-
-  // },[])
-
-  const [ticket, setTickets] = useState([])
-  useEffect(() => {
-    const db = getFirestore()
-
-    const q = query(
-      collection(db,"item"),
-      where("precio",">",190000)
-    )
-
-    getDocs(q).then((snapshot.size ===  0),
-        {id: doc.id,...doc.data}
-    )
-
-
-  }, [])
-
 
   return (
     <div>
@@ -79,6 +31,8 @@ const App = () => {
 
             <Route path='/cart' element={<Cart />} />
 
+            <Route path='/CheckOut' element={<CheckOut/>}/>
+
             <Route path='*' element={<Error />} />
 
           </Routes>
@@ -96,4 +50,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
