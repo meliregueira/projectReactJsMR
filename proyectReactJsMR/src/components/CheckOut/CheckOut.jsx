@@ -3,9 +3,9 @@ import { db } from '../../firebase/config';
 import { collection,addDoc,updateDoc,doc,getDoc } from 'firebase/firestore';
 import { CartContext } from '../../context/CartContext';
 
-const Checkout = () => {
+const CheckOut = () => {
 
-    const {cart,totalCarrito,vaciarCarrito} = useContext(CartContext)
+    const {cart,totalCarrito,cantidadCarrito,vaciarCarrito} = useContext(CartContext)
 
     const [nombre,setNombre] = useState("")
     const [apellido,setApellido] = useState("")
@@ -143,4 +143,4 @@ const Checkout = () => {
     );
 };
 
-export default Checkout;
+export default CheckOut;

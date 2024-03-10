@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const CartItem = ({ entrada, eliminarEntrada }) => {
+const CartItem = ({entrada,eliminarEntrada}) => {
 
   return (
     <div>
@@ -10,7 +10,7 @@ const CartItem = ({ entrada, eliminarEntrada }) => {
       <img src={entrada.entrada.img} alt={entrada.entrada.nombre} />
       <p>Cantidad: {entrada.cantidad}</p>
 
-      <p>Valor unitario: ${entrada.entrada.precio * entrada.cantidad}</p>
+      <p>Valor unitario: ${entrada.entrada.precio}</p>
 
       <button onClick={() => eliminarEntrada(entrada.entrada.id)}>Eliminar entrada</button>
 

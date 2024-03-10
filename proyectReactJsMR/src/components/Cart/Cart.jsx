@@ -21,19 +21,23 @@ import CartItem from '../CartItem/CartItem';
         :
         <>
         <h2>Lista de carrito</h2>
-        {cart.map((ent) => (
-          <CartItem key={ent.id} entrada={ent} eliminarEntrada={eliminarEntrada}/>
+        {cart.map((l) => (
+          <CartItem key={l.entrada.id} entrada={l} eliminarEntrada={eliminarEntrada}/>
         ))}
 
         <p>Total: ${totalCarrito()}</p>
 
         <button onClick={vaciarCarrito}>Vaciar carrito</button>
 
+          <Link to={'/CheckOut'}>
+            Finalizar compra
+          </Link>
+
         </>
       }
 
     </div>
-  )
-}
+  );
+};
 
 export default Cart;
