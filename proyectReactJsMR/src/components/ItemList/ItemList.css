@@ -1,5 +1,8 @@
 .tienda{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
+    background-color: rgba(220, 220, 220, 0.766);
+    padding: 10px;
 }

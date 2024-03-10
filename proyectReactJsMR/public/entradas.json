@@ -57,7 +57,7 @@
     },
     {
         "id": "Pack2",
-        "nombre": "Paquetes",
+        "nombre": "Paquete2",
         "precio": 60000,
         "stock": 2000000,
         "img": "/assets/img/epcot.jpg",
