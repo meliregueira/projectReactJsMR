@@ -22,12 +22,9 @@ const Navbar = () => {
           <NavLink to='/categoria/Paquetes'>Paquetes</NavLink>
         </li>
 
-        <li>
-          <NavLink to='/cart'>Carrito</NavLink>
-        </li>
     </ul>
 
-    <CartWidget/>
+    <NavLink to='/cart'><CartWidget/></NavLink> 
     
     </div>
   )

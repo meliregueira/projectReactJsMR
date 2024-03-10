@@ -13,7 +13,8 @@ import CartItem from '../CartItem/CartItem';
       {cart.length == 0
         ?
         <>
-          <h1>No hay entradas seleccionadas</h1>
+          <h1>Carrito</h1>
+          <h2>No hay entradas seleccionadas</h2>
           <Link to={"/"}>Ir al Inicio</Link>
         </>
 

@@ -1,3 +1,10 @@
-.CartWidget{
+.CartIcono{
     width: 30px;
+}
+
+.CartWidget{
+    display: flex;
+    align-items: center;
+    margin-right: 1%;
+    justify-content: space-between;
 }
