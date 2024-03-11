@@ -1,0 +1,4 @@
+.cart-item-vw{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,10 @@
+.contador{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.botones-contador{
+    display: flex;
+    justify-content: space-around;
+}

@@ -10,17 +10,13 @@
         display: flex;
         justify-content: space-evenly;
         list-style-type: none;
+        color: white;
         li{
             margin-inline: 2vw;
         }
     }
 
     
-}
-
-a{
-    color: white;
-    text-decoration: none;
 }
 
 .active{

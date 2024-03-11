@@ -20,7 +20,7 @@ const CheckOut = () => {
 
         event.preventDefault()
 
-        if(!nombre || !apellido || !telefono || !email || !emailConfirmacion){
+        if(!nombre || !apellido || !telefono || !pais || !email || !emailConfirmacion){
             setError("Completar los campos obligatorios")
             return;
         }
@@ -41,6 +41,7 @@ const CheckOut = () => {
             nombre,
             apellido,
             telefono,
+            pais,
             email
         }
 
@@ -117,7 +118,13 @@ const CheckOut = () => {
 
                     <div>
                         <label htmlFor="Pais">País</label>
-                        <input name="Pais" type='text' onChange={(e) => setPais(e.target.value)}/>
+                        <select name="Pais" onChange={(e) => setPais(e.target.value)}>
+                        <option value="" disabled selected>Selecciona tu país</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Uruguay">Uruguay</option>
+                        </select>
                     </div>
 
                     <div>

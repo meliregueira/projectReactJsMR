@@ -1,9 +1,10 @@
 import React from 'react';
+import './CartItem.css'
 
 const CartItem = ({entrada,eliminarEntrada}) => {
 
   return (
-    <div>
+    <div className='cart-item-vw'>
 
       <h3>{entrada.entrada.nombre}</h3>
 

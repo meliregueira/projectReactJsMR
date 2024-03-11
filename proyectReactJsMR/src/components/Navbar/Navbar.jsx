@@ -16,7 +16,7 @@ const Navbar = () => {
           <NavLink to='/categoria/Atracciones'>Atracciones</NavLink>
         </li>
         <li>
-          <NavLink to='/categoria/ParquesDeAgua'>ParquesDeAgua</NavLink>
+          <NavLink to='/categoria/ParquesDeAgua'>Parques De Agua</NavLink>
         </li>
         <li>
           <NavLink to='/categoria/Paquetes'>Paquetes</NavLink>

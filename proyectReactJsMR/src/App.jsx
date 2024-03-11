@@ -14,7 +14,7 @@ import CheckOut from './components/CheckOut/CheckOut';
 const App = () => {
 
   return (
-    <div>
+    <div className='body'>
       <BrowserRouter>
 
         <CartProvider>

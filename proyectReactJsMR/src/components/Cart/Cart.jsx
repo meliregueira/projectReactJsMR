@@ -2,13 +2,14 @@ import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import CartItem from '../CartItem/CartItem';
+import './Cart.css'
 
   const Cart = () => {
 
   const {cart,vaciarCarrito,eliminarEntrada,totalCarrito} = useContext(CartContext)
 
   return (
-    <div>
+    <div className='cart-vw'>
 
       {cart.length == 0
         ?

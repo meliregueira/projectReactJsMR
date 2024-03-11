@@ -1,0 +1,9 @@
+.cart-vw{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1%;
+    background-color: rgba(220, 220, 220, 0.766);
+}
