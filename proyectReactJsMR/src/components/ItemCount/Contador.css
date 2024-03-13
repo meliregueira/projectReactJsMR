@@ -2,9 +2,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 2%;
 }
 
 .botones-contador{
     display: flex;
     justify-content: space-around;
+    padding-top: 2%;
+}
+
+.botones-contadorsumaresta{
+    width: 20px;
 }

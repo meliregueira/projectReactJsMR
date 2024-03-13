@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react';
 import { db } from '../../firebase/config';
 import { collection,addDoc,updateDoc,doc,getDoc } from 'firebase/firestore';
 import { CartContext } from '../../context/CartContext';
+import './CheckOut.css';
 
 const CheckOut = () => {
 
@@ -78,9 +79,9 @@ const CheckOut = () => {
     }
 
     return (
-        <div>
+        <div className='formspv'>
 
-            <h1>Ingresa tus datos</h1>
+            <h2>Estas comprando:</h2>
 
             <form onSubmit={manejadorFormulario}>
 
@@ -88,11 +89,13 @@ const CheckOut = () => {
 
                 <div key={entrada.entrada.id}>
 
+                   
+
                         <p>
                             {""}
-                            {entrada.entrada.nombre} x {entrada.cantidad}
+                            {entrada.cantidad} entradas para {entrada.entrada.nombre}
                         </p>
-                        <hr/>
+                    
 
                     </div> 
                 ))}
@@ -100,7 +103,9 @@ const CheckOut = () => {
                
                
                 <div >
-
+                <h1>Ingresa tus datos</h1>
+                <p>para continuar con la compra</p>
+                    <hr />
                     <div>
                         <label htmlFor="Nombre">Nombre</label>
                         <input name="Nombre" type='text' onChange={(e) => setNombre(e.target.value)}/>
