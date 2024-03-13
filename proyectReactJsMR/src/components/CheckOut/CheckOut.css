@@ -1,7 +1,25 @@
 .formspv{
     display: flex;
     flex-direction: column;
+    width: 100vw;
     align-items: center;
-    justify-content: space-around;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.forms-list{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2%;
+}
+
+.label-order{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2%;
+}

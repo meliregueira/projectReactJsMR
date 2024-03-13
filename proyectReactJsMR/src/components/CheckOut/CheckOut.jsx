@@ -102,26 +102,26 @@ const CheckOut = () => {
 
                
                
-                <div >
+                <div className='forms-list'>
                 <h1>Ingresa tus datos</h1>
                 <p>para continuar con la compra</p>
                     <hr />
-                    <div>
+                    <div className='label-order'>
                         <label htmlFor="Nombre">Nombre</label>
                         <input name="Nombre" type='text' onChange={(e) => setNombre(e.target.value)}/>
                     </div>
 
-                    <div>
+                    <div className='label-order'>
                         <label htmlFor="Apellido">Apellido</label>
                         <input name="Apellido" type='text' onChange={(e) => setApellido(e.target.value)}/>
                     </div>
 
-                    <div>
+                    <div className='label-order'>
                         <label htmlFor="Telefono">Teléfono</label>
                         <input name="Teléfono" type='text' pattern='[0-9 ()+.-]*' onChange={(e) => setTelefono(e.target.value)}/>
                     </div>
 
-                    <div>
+                    <div className='label-order'>
                         <label htmlFor="Pais">País</label>
                         <select name="Pais" onChange={(e) => setPais(e.target.value)}>
                         <option value="" disabled selected>Selecciona tu país</option>
@@ -132,12 +132,12 @@ const CheckOut = () => {
                         </select>
                     </div>
 
-                    <div>
+                    <div className='label-order'>
                         <label htmlFor="Email">Email</label>
                         <input name="Email" type='email' onChange={(e) => setEmail(e.target.value)}/>
                     </div>
 
-                    <div>
+                    <div className='label-order'>
                         <label htmlFor="EmailConfirmacion">Email Confirmacion</label>
                         <input name="EmailConfirmacion" type='email' onChange={(e) => setEmailConfirmacion(e.target.value)}/>
                     </div>
