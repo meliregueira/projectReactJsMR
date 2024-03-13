@@ -1,15 +1,15 @@
 import React from 'react'
 import './Footer.css'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
     <div className='Footer'>
       <ul className='footer-ul'>
-      <li>Inicio</li>
-      <li>Noticias</li>
-      <li>Parques</li>
-      <li>Entradas</li>
-      <li>Carrito</li>
+      <li><NavLink className='footer-a' to='/'>Inicio</NavLink> </li>
+      <li><NavLink className='footer-a' to='/Parques'>Parques</NavLink></li>
+      <li><NavLink className='footer-a' to='/Cart'>Carrito</NavLink></li>
+ 
 
       </ul>
     
