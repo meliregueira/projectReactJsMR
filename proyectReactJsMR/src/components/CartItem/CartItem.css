@@ -1,4 +1,7 @@
 .cart-item-vw{
     display: flex;
     flex-direction: column;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }

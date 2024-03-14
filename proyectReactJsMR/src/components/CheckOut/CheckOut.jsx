@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState,} from 'react';
 import { db } from '../../firebase/config';
 import { collection,addDoc,updateDoc,doc,getDoc } from 'firebase/firestore';
 import { CartContext } from '../../context/CartContext';
@@ -89,23 +89,21 @@ const CheckOut = () => {
 
                 <div key={entrada.entrada.id}>
 
-                   
 
                         <p>
                             {""}
                             {entrada.cantidad} entradas para {entrada.entrada.nombre}
+
                         </p>
-                    
+                        
 
                     </div> 
                 ))}
 
-               
-               
-                <div className='forms-list'>
-                <h1>Ingresa tus datos</h1>
-                <p>para continuar con la compra</p>
-                    <hr />
+                <div>
+                    <h1>Ingresa tus datos</h1>
+                    <p>para continuar con la compra</p>
+
                     <div className='label-order'>
                         <label htmlFor="Nombre">Nombre</label>
                         <input name="Nombre" type='text' onChange={(e) => setNombre(e.target.value)}/>
